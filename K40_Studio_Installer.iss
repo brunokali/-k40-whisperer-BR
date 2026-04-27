@@ -1,6 +1,7 @@
 [Setup]
 AppName=K40 Studio BR
-AppVersion=0.71
+AppVersion=0.71.1
+; Versão 0.71.1: Adicionado suporte a limites dinâmicos de segurança (Hard Limits) baseados na configuração da máquina.
 AppPublisher=K40 Studio BR
 DefaultDirName=C:\K40_Studio_BR
 DefaultGroupName=K40 Studio BR

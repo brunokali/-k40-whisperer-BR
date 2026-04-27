@@ -4216,6 +4216,15 @@ class Application(Frame):
 
         # ── Máquina CO2 M2 Nano via USB ───────────────────────
         self.k40 = K40_CLASS()
+        
+        # Sincroniza limites de segurança com o tamanho configurado
+        try:
+            w_mm = float(self.LaserXsize.get())
+            h_mm = float(self.LaserYsize.get())
+            self.k40.set_hard_limits(w_mm, h_mm)
+        except:
+            pass
+
         try:
             self.k40.initialize_device()
             self.USB_Indicator.set(_("🟢 CONECTADO (CO2/EGV)"))
@@ -4273,6 +4282,14 @@ class Application(Frame):
             self.grbl_baud.set(str(res["baud_rate"]))
             self.LaserXsize.set(str(res["laser_area_width"]))
             self.LaserYsize.set(str(res["laser_area_height"]))
+            
+            # Atualiza limites de segurança se o laser estiver conectado
+            if self.k40:
+                try:
+                    self.k40.set_hard_limits(res["laser_area_width"], res["laser_area_height"])
+                except:
+                    pass
+
             label = _("✅ Máquina CO2 configurada.") if mtype == "co2" else _("✅ GRBL configurado em ") + res["com_port"]
             self.statusMessage.set(label)
             self.statusbar.configure(bg='white')

@@ -61,6 +61,11 @@ class K40_CLASS:
         # Safety & Diagnostics
         self.hard_limit_x = 12600 # Default 320mm in mils
         self.hard_limit_y = 7874  # Default 200mm in mils
+
+    def set_hard_limits(self, x_mm, y_mm):
+        """Atualiza os limites de segurança baseados no tamanho da máquina (mm)."""
+        self.hard_limit_x = int(round(x_mm * (1000.0 / 25.4)))
+        self.hard_limit_y = int(round(y_mm * (1000.0 / 25.4)))
         self.pos_x = 0
         self.pos_y = 0
         self.total_crc_errors = 0
