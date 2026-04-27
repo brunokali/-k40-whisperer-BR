@@ -8,14 +8,14 @@ Esta versão foi personalizada para o público brasileiro, focando em segurança
 
 Clique no link abaixo para baixar a versão mais recente pronta para uso:
 
-👉 **[Baixar K40 Studio BR (Instalador .exe)](https://github.com/brunokali/-k40-whisperer-BR/releases/download/v1/K40_Studio_BR_Setup.exe)**
+👉 **[Baixar K40 Studio BR v0.71.1 (Instalador .exe)](https://github.com/brunokali/-k40-whisperer-BR/releases/download/v1/K40_Studio_BR_Setup.exe)**
 
 ---
 
 ## ✨ Principais Melhorias e Recursos
 
 - **🌐 Tradução Completa:** Interface totalmente em Português Brasileiro (PT-BR).
-- **🛡️ Segurança Reforçada (Hard Limits):** Bloqueio automático de comandos que ultrapassam a área física da máquina (320x200mm), protegendo os motores e trilhos.
+- **🛡️ Segurança Inteligente (Dynamic Hard Limits):** O software agora bloqueia comandos que ultrapassam a área física da máquina de forma dinâmica, baseando-se no tamanho configurado no Assistente de Máquina (Machine Wizard).
 - **⚡ Performance Otimizada:** Remoção do suporte experimental a GRBL para garantir máxima estabilidade com placas M2 Nano.
 - **🎨 Integração CorelDraw:** Macros inclusas para facilitar o fluxo de trabalho direto do Corel.
 - **🛠️ Wizard de Máquina:** Configuração simplificada para novos usuários.
